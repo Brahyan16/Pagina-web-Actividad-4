@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>ColTech</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Banner superior (Logo) -->
+ <header>
+  <div class="logo">
+    <img src="logo-coltech.jpg" alt="Logo ColTech" />
+  </div>
+  <h1>ColTech</h1>
+</header>
+
+  <!-- Menú -->
+    <nav>
+    <a href="#tienda">Nuestra Tienda On-line</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contáctenos</a>
+    <a href="#cotizacion">Solicitud de Cotización</a>
+    <a href="#cuento">Diseña tu cuento</a>
+    <a href="#CotizaTuProducto">Cotiza tu producto</a>
+
+  </nav>
+
+  <!-- Sección Tienda -->
+  <section id="tienda">
+    <h2>Nuestra Tienda On-line</h2>
+    <p>Bienvenidos a ColTech. Una tienda en linea dedicada a la venta y reparacion de productos tecnologicos.</p>
+    <ul>
+      <li>Brahyan Velez Lenis - Fundador y Administrador</li>
+    </ul>
+  </section>
+
+  <!-- Sección Servicios -->
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <h3>1. Asesoría personalizada</h3>
+    <p>Te ayudamos a elegir los productos que mejor se ajustan a tus necesidades.</p>
+
+    <h3>2. Reparación y mantenimiento</h3>
+    <p>Reparamos computadoras, celulares y más. Servicio rápido y garantizado.</p>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto">
+    <h2>Contáctenos</h2>
+    <p><strong>WhatsApp:</strong> +57 312 487 8945</p>
+    <p><strong>Celular:</strong> +57 312 487 8945</p>
+    <p><strong>Dirección:</strong> Carrera 10 #8-45, Angostura, Colombia</p>
+    <iframe src="https://www.google.com/maps?q=Carrera+10+%238-45,+Angostura,+Antioquia,+Colombia&output=embed"></iframe>
+  </section>
+
+  <!-- Sección Cotización -->
+  <section id="cotizacion">
+    <h2>Solicitud de Cotización</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="producto">Producto de interés:</label>
+      <input type="text" id="producto" name="producto" required />
+
+      <label for="detalles">Detalles adicionales:</label>
+      <textarea id="detalles" name="detalles" rows="4"></textarea>
+
+      <input type="submit" value="Enviar solicitud" />
+    </form>
+  </section>
+
+      <!-- Sección Diseña tu cuento -->
+  <section id="cuento">
+    <h2>Diseña tu cuento</h2>
+    <form id="cuentoForm">
+      <label for="cuentoNombre">Nombres y Apellidos:</label>
+      <input type="text" id="cuentoNombre" name="cuentoNombre" required><br><br>
+
+      <label for="cuentoApodo">Apodo:</label>
+      <input type="text" id="cuentoApodo" name="cuentoApodo" required><br><br>
+
+      <label for="cuentoCabello">Color de Cabello:</label>
+      <input type="text" id="cuentoCabello" name="cuentoCabello" required><br><br>
+
+      <label for="cuentoOjos">Color de Ojos:</label>
+      <input type="text" id="cuentoOjos" name="cuentoOjos" required><br><br>
+
+      <label for="cuentoEdad">Edad:</label>
+      <input type="number" id="cuentoEdad" name="cuentoEdad" required><br><br>
+
+      <label for="cuentoHobby">Hobby:</label>
+      <input type="text" id="cuentoHobby" name="cuentoHobby" required><br><br>
+
+      <button type="submit">Continuar</button>
+    </form>
+
+    <div id="cuentoResultado" style="margin-top:20px; font-weight:bold;"></div>
+  </section>
+
+  <!-- Sección Cotiza tu producto -->
+  <section id="CotizaTuProducto">
+            <h2>Solicitud de Cotización</h2>
+            <form method="post" action="procesar.php" id="formCotizacion">
+                <label>Nombres y Apellidos:</label>
+                <input type="text" name="nombres" required><br><br>
+
+                <label>Ciudad:</label>
+                <select name="ciudad" required>
+                    <option>Bogotá</option>
+                    <option>Medellín</option>
+                    <option>Cali</option>
+                </select><br><br>
+
+                <label>Dirección:</label>
+                <input type="text" name="direccion" required><br><br>
+
+                <label>Celular:</label>
+                <input type="text" name="celular" required><br><br>
+
+                <h3>Productos</h3>
+                <label><input type="checkbox" name="producto[1]" value="Computador"> Computador</label>
+                Cantidad: <input type="number" name="cantidad[1]" min="1"><br><br>
+
+                <label><input type="checkbox" name="producto[2]" value="Impresora"> Impresora</label>
+                Cantidad: <input type="number" name="cantidad[2]" min="1"><br><br>
+
+                <label><input type="checkbox" name="producto[3]" value="Monitor"> Monitor</label>
+                Cantidad: <input type="number" name="cantidad[3]" min="1"><br><br>
+
+                <label><input type="checkbox" name="producto[4]" value="Celular"> Celular</label>
+                Cantidad: <input type="number" name="cantidad[4]" min="1"><br><br>
+
+                <button type="submit">Enviar datos</button>
+                <button type="button" id="cancelarBtn">Cancelar</button>
+            </form>
+        </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
